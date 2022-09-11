@@ -1,6 +1,7 @@
 
 // todo:
 // change percentages to set heights and witdths
+// fix portrait sizing
 
 document.addEventListener("click", closeProjects)
 window.onload = function () {
@@ -39,3 +40,4 @@ function closeProjects(element) {
 
 
 }
+
