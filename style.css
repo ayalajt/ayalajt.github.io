@@ -260,10 +260,15 @@ p.sub {
     flex-direction: column;
 }
 
-.project-text p {
+.project-text p, .project-text ul {
     margin: 0;
     margin-bottom: 5px;
 }
+
+.project-text li {
+    margin: 0;
+}
+
 
 .project-popup-bg {
     top: 50%;

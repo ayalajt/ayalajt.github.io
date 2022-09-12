@@ -2,6 +2,7 @@
 // todo:
 // change percentages to set heights and witdths
 // fix portrait sizing
+// replace java calc with mini golf app on resume
 
 document.addEventListener("click", closeProjects)
 window.onload = function () {
