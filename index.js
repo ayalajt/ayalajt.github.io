@@ -24,13 +24,14 @@ function loadProjects() {
 
 
 function openProject(element) {
-    let projectId = element.target.getAttribute("id");
-    projectId += "-info"
-    document.getElementById(projectId).style.display = "flex";
+    let closestProj = element.target.closest(".project");
+    let closeProjId = closestProj.getAttribute("id");
+    closeProjId += "-info"
+    document.getElementById(closeProjId).style.display = "flex";
 }
 
 function closeProjects(element) {
-
+    console.log(element.target.classList)
     if (element.target.classList.contains("project-popup-bg")) {
         let elements = document.querySelectorAll(".project-popup-bg");
         for (var i = 0; i < elements.length; i++) {
