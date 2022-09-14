@@ -9,13 +9,26 @@
 </head>
 
 <body>
+    <a name="home"></a>
     <div class="nav-bar">
+        <a class="nav-button" href="#home">
+            <p>Home</p>
+        </a>
+        <a class="nav-button" href="#introduction">
+            <p>Introduction</p>
+        </a>
+        <a class="nav-button" href="#skills">
+            <p>Skills</p>
+        </a>
+        <a class="nav-button" href="#projects">
+            <p>Projects</p>
+        </a>
     </div>
     <div class="header-container">
         <h1>Jesus Ayala</h1>
         <h2>Software Engineer</h2>
     </div>
-    <div class="introduction-container">
+    <a name="introduction" class="introduction-container">
         <h1>Introduction</h1>
         <div class="introduction-subcontainer">
             <div class="image-container">
@@ -25,12 +38,24 @@
             </div>
             <div class="introduction-blurb-container">
                 <p>Hi! I'm Jesus Ayala, a recent graduate from Virginia Commonwealth University. I graduated in 2022
-                    with a Bachelor of the Sciences, with a major in Computer Science and a minor in Mathematics.
+                    with a Bachelor of the Sciences, with a major in Computer Science, a concentration in Software
+                    Engineering, and a minor in Mathematics.
+                </p>
+                <p>
+                    I began my programming journey by tinkering around in PC games I played as a kid, creating
+                    custom mods and levels. I enjoy creating programs that are useful and practical in daily life,
+                    whether that be an automatic sales
+                    report tool for local restaurants or a website that allows novice programmers to visualize their
+                    code via
+                    flowcharts. Currently, I mainly program in Python, but I also enjoy learning about new
+                    languages, frameworks, and tools. In my free time, I enjoy
+                    challenging myself by developing programs or applications with unfamiliar frameworks or
+                    interfaces in order to increase my familiaraity with them.
                 </p>
             </div>
         </div>
-    </div>
-    <div class="skills-bg">
+    </a>
+    <a name="skills" class="skills-bg">
         <div class="skills-container">
             <h1>Skills</h1>
             <div class="skills-subcontainer">
@@ -53,6 +78,8 @@
                             <li>FileZilla</li>
                             <li>VSCode</li>
                             <li>Eclipse</li>
+                            <li>Heroku</li>
+
                         </ul>
                     </div>
                 </div>
@@ -61,7 +88,7 @@
                     <div class="technical-skills-text">
                         <ul>
                             <li>Communication and leadership skills gained from working as an assistant manager at
-                                Little Mexico for over 4 years</li>
+                                Little Mexico, a local restaurant, for over 4 years</li>
                             <li>Self-motivation skills gained from completing numerous personal projects</li>
                             <li>Organizational skills gained from documenting code and thoroughly planning development
                                 in
@@ -78,8 +105,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="projects-container">
+    </a>
+    <a name="projects" class="projects-container">
         <h1>Projects</h1>
         <div class="project-objects">
             <div class="project" id="proj-1">
@@ -140,201 +167,210 @@
             </div>
 
         </div>
-
-        <div class="project-popup-bg" id="proj-1-info">
-            <div class="project-popup">
-                <h1>Tip Tool</h1>
+    </a>
+    <div class="project-popup-bg" id="proj-1-info">
+        <div class="project-popup p1">
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
+            <h1>Tip Tool</h1>
+            <div class="image-arrow-container">
+                <div class="arrow-container">
+                    <img id="proj-1-left" src="./images/icons/left-arrow.svg" onclick="projOnePrevImage(this)">
+                </div>
                 <div class="popup-image-container">
+                    <img class="current-image" id="proj-1-image" src="./images/proj-1-tipcalc/img-1.png">
+                </div>
+                <div class="arrow-container">
+                    <img id="proj-1-right" class="active" src="./images/icons/right-arrow.svg" onclick="projOneNextImage(this)">
+                </div>
 
-                </div>
-                <div class="project-text">
-                    <p>Individually developed a website used by a local restaurant to calculate the tip payout
-                        for each worker per day.
-                    </p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Calculates the tip payout for each worker depending on their position and hours</li>
-                        <li>Saves these daily payouts on a server so they can be accessed later</li>
-                        <li>Previous payouts can be added together to view each worker's total within a certain date
-                            range</li>
-                        <li>Tip payouts can be saved as a PDF</li>
-                        <li>An extra tab, for managers only, allows them to input the total cash made and combine
-                            it with the tip payout to view the cash total for the day
-                        </li>
-                        <li>These cash reports are also stored on a server so they can be accessed whenever necessary
-                        </li>
-                    </ul>
-                    <p>Created in HTML, Javascript, deployed via Heroku, and information is stored via a cloud JSON API.
-                    </p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
             </div>
-
+            <div class="image-tip" id="proj-1-tip"><p>Input Worker Information</p></div>
+            <div class="project-text">
+                <p>Individually developed a website used by a local restaurant to calculate the tip payout
+                    for each worker per day.
+                </p>
+                <p>Features:</p>
+                <ul>
+                    <li>Calculates the tip payout for each worker depending on their position and hours</li>
+                    <li>Saves these daily payouts on a server so they can be accessed later</li>
+                    <li>Previous payouts can be added together to view each worker's total within a certain date
+                        range</li>
+                    <li>Tip payouts can be saved as a PDF</li>
+                    <li>An extra tab, for managers only, allows them to input the total cash made and combine
+                        it with the tip payout to view the cash total for the day
+                    </li>
+                    <li>These cash reports are also stored on a server so they can be accessed whenever necessary
+                    </li>
+                </ul>
+                <p>Created in HTML, Javascript, deployed via Heroku, and information is stored via a cloud JSON API.
+                </p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
-        <div class="project-popup-bg" id="proj-2-info">
-            <div class="project-popup">
-                <h1>RAMAction</h1>
-                <div class="popup-image-container">
+    </div>
+    <div class="project-popup-bg" id="proj-2-info">
+        <div class="project-popup p2">
+            <h1>RAMAction</h1>
+            <div class="popup-image-container">
 
-                </div>
-                <div class="project-text">
-                    <p>Created an application with 3 other developers that allows users to visualize basic programming
-                        statements (if-else, assignment, loops, input, and output) with flowcharts and be able to see
-                        the code run
-                        step-by-step.
-                    </p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Free, hosted as a website</li>
-                        <li>Users can drag and drop different code blocks and combine them, similar to how actual code
-                            is structured</li>
-                        <li>Contains common flowchart tools, such as play, pause, stop, step, and zoom-level</li>
-                        <li>Flowcharts can showcase how variables change during runtime with the variable history log
-                        </li>
-                        <li>Flowcharts can be exported as a PNG or as a file that can beuploaded to the website for
-                            later use</li>
-                        <li>Contains a guide that specifies how the flowchart tools and code blocks work, providing
-                            examples as well</li>
-                    </ul>
-                    <p>Developed with ReactJS, NodeJS, HTML, and CSS. Group worked together via agile software process.
-                    </p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
             </div>
+            <div class="project-text">
+                <p>Created an application with 3 other developers that allows users to visualize basic programming
+                    statements (if-else, assignment, loops, input, and output) with flowcharts and be able to see
+                    the code run
+                    step-by-step.
+                </p>
+                <p>Features:</p>
+                <ul>
+                    <li>Free, hosted as a website</li>
+                    <li>Users can drag and drop different code blocks and combine them, similar to how actual code
+                        is structured</li>
+                    <li>Contains common flowchart tools, such as play, pause, stop, step, and zoom-level</li>
+                    <li>Flowcharts can showcase how variables change during runtime with the variable history log
+                    </li>
+                    <li>Flowcharts can be exported as a PNG or as a file that can beuploaded to the website for
+                        later use</li>
+                    <li>Contains a guide that specifies how the flowchart tools and code blocks work, providing
+                        examples as well</li>
+                </ul>
+                <p>Developed with ReactJS, NodeJS, HTML, and CSS. Group worked together via agile software process.
+                </p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
-        <div class="project-popup-bg" id="proj-3-info">
-            <div class="project-popup">
-                <h1>My Mini Swing</h1>
-                <div class="popup-image-container">
+    </div>
+    <div class="project-popup-bg" id="proj-3-info">
+        <div class="project-popup p3">
+            <h1>My Mini Swing</h1>
+            <div class="popup-image-container">
 
-                </div>
-                <div class="project-text">
-                    <p>Developed an Android application that keeps track of each player's strokes per hole in a game
-                        of mini golf.
-                    </p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Can input 9, 18, or a custom number of holes</li>
-                        <li>Can input up to 4 players</li>
-                        <li>At the end of the game, it lets the user know what player won and everyone else's position
-                        </li>
-                        <li>Available on the Google Play Store for free</li>
-                    </ul>
-                    <p>Developed with Android Studio and Java, utilized and led group with agile software process</p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
             </div>
+            <div class="project-text">
+                <p>Developed an Android application that keeps track of each player's strokes per hole in a game
+                    of mini golf.
+                </p>
+                <p>Features:</p>
+                <ul>
+                    <li>Can input 9, 18, or a custom number of holes</li>
+                    <li>Can input up to 4 players</li>
+                    <li>At the end of the game, it lets the user know what player won and everyone else's position
+                    </li>
+                    <li>Available on the Google Play Store for free</li>
+                </ul>
+                <p>Developed with Android Studio and Java, utilized and led group with agile software process</p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
-        <div class="project-popup-bg" id="proj-4-info">
-            <div class="project-popup">
-                <h1>Sales Summary Excel Extractor</h1>
-                <div class="popup-image-container">
+    </div>
+    <div class="project-popup-bg" id="proj-4-info">
+        <div class="project-popup p4">
+            <h1>Sales Summary Excel Extractor</h1>
+            <div class="popup-image-container">
 
-                </div>
-                <div class="project-text">
-                    <p>Individually created a Python application for a client that owns a restaurant in order to speed
-                        up monthly sales reports,
-                        which were previously hand-written. Where before it would take an hour to complete, it now takes
-                        5 minutes with this tool.
-                        The application parses through multiple Microsoft Excel sheets, extracts certain sales
-                        information, and prints this information formatted in a PDF
-                    </p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Converts as many uploaded excel sheets to a PDF with certain sales information</li>
-                        <li>Can prase through excel sheets even if they are an older version or have the sales
-                            information in different sections</li>
-                        <li>Is able to upload these PDFs to Google Drive automatically</li>
-                    </ul>
-                    <p>Developed in Python, uses the Google Drive API</p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
             </div>
+            <div class="project-text">
+                <p>Individually created a Python application for a client that owns a restaurant in order to speed
+                    up monthly sales reports,
+                    which were previously hand-written. Where before it would take an hour to complete, it now takes
+                    5 minutes with this tool.
+                    The application parses through multiple Microsoft Excel sheets, extracts certain sales
+                    information, and prints this information formatted in a PDF
+                </p>
+                <p>Features:</p>
+                <ul>
+                    <li>Converts as many uploaded excel sheets to a PDF with certain sales information</li>
+                    <li>Can prase through excel sheets even if they are an older version or have the sales
+                        information in different sections</li>
+                    <li>Is able to upload these PDFs to Google Drive automatically</li>
+                </ul>
+                <p>Developed in Python, uses the Google Drive API</p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
+        </div>
+    </div>
+
+    <div class="project-popup-bg" id="proj-5-info">
+        <div class="project-popup p5">
+            <h1>C Text Parser</h1>
+            <div class="popup-image-container">
+            </div>
+            <div class="project-text">
+                <p>Developed a C program in VIM that tokenizes and parses through a text file to check if it is a
+                    syntactically valid C program</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Parses through a C file to verify if the format is valid</li>
+                    <li>Checks valid grammar pattern, and can print the number of lexemes as well as the
+                        lexemes themselves</li>
+                </ul>
+                <p>Developed in C with VIM</p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
+        </div>
+    </div>
+
+    <div class="project-popup-bg" id="proj-6-info">
+        <div class="project-popup p6">
+            <h1>Linear Algebra Calculator</h1>
+            <div class="popup-image-container">
+            </div>
+            <div class="project-text">
+                <p>Created a calculator for Android that can be used for common Linear Algebra operations.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Allows users to compute common concepts such as:</li>
+                    <ul>
+                        <li>Matrices Operations</li>
+                        <li>Truth Tables</li>
+                        <li>Combination Operations</li>
+                        <li>Decimal to Hexadecimal or Binary Conversions</li>
+                    </ul>
+                    <li>Also is able to do Java Primitive Type Conversion</li>
+
+                </ul>
+                <p>Developed with Android Studio and Java, utilized and led group with agile software process</p>
+            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
 
-        <div class="project-popup-bg" id="proj-5-info">
-            <div class="project-popup">
-                <h1>C Text Parser</h1>
-                <div class="popup-image-container">
-                </div>
-                <div class="project-text">
-                    <p>Developed a C program in VIM that tokenizes and parses through a text file to check if it is a
-                        syntactically valid C program</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Parses through a C file to verify if the format is valid</li>
-                        <li>Checks valid grammar pattern, and can print the number of lexemes as well as the
-                            lexemes themselves</li>
-                    </ul>
-                    <p>Developed in C with VIM</p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
+    </div>
+
+    <div class="project-popup-bg" id="proj-7-info">
+        <div class="project-popup p7">
+            <h1>Word Sense Disambiguation</h1>
+            <div class="popup-image-container">
+
             </div>
-        </div>
-
-        <div class="project-popup-bg" id="proj-6-info">
-            <div class="project-popup">
-                <h1>Linear Algebra Calculator</h1>
-                <div class="popup-image-container">
-                </div>
-                <div class="project-text">
-                    <p>Created a calculator for Android that can be used for common Linear Algebra operations.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Allows users to compute common concepts such as:</li>
-                        <ul>
-                            <li>Matrices Operations</li>
-                            <li>Truth Tables</li>
-                            <li>Combination Operations</li>
-                            <li>Decimal to Hexadecimal or Binary Conversions</li>
-                        </ul>
-                        <li>Also is able to do Java Primitive Type Conversion</li>
-
-                    </ul>
-                    <p>Developed with Android Studio and Java, utilized and led group with agile software process</p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
+            <div class="project-text">
+                <p>Developed a program that is a Decision List classifier for disambiguating the word "line" given a
+                    training and testing file
+                </p>
+                <p>Features:</p>
+                <ul>
+                    <li>Accepts a training and a testing file that each have different instances of the word "line"
+                    </li>
+                    <li>Parses through the training file to gather information for each instance of the word "line",
+                        creating
+                        features to increase the accuracy of detecting what form of the word "line" is in
+                    </li>
+                    <li>Uses the information gathered from the training file on the testing file</li>
+                    <li>Compares the testing file results with a key, and outputs the results in a matrix with an
+                        overall accuracy score</li>
+                </ul>
+                <p>Developed in Python</p>
             </div>
-
-        </div>
-
-        <div class="project-popup-bg" id="proj-7-info">
-            <div class="project-popup">
-                <h1>Word Sense Disambiguation</h1>
-                <div class="popup-image-container">
-
-                </div>
-                <div class="project-text">
-                    <p>Developed a program that is a Decision List classifier for disambiguating the word "line" given a
-                        training and testing file
-                    </p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Accepts a training and a testing file that each have different instances of the word "line"
-                        </li>
-                        <li>Parses through the training file to gather information for each instance of the word "line",
-                            creating
-                            features to increase the accuracy of detecting what form of the word "line" is in
-                        </li>
-                        <li>Uses the information gathered from the training file on the testing file</li>
-                        <li>Compares the testing file results with a key, and outputs the results in a matrix with an
-                            overall accuracy score</li>
-                    </ul>
-                    <p>Developed in Python</p>
-                </div>
-                <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
-            </div>
+            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
     </div>
     <div class="contact-container">
         <div class="icons-container">
-            <a href="https://github.com/ayalajt">
+            <a href="https://github.com/ayalajt" target="_blank">
                 <img src="./images/icons/github.svg" />
             </a>
-            <a href="mailto: ayalajt@vcu.edu">
+            <a href="mailto: ayalajt@vcu.edu" target="_blank">
                 <img src="./images/icons/email.svg" />
             </a>
-            <a href="https://www.linkedin.com/in/ayalajesus/">
+            <a href="https://www.linkedin.com/in/ayalajesus/" target="_blank">
                 <img src="./images/icons/linkedin.svg" />
             </a>
         </div>

@@ -1,8 +1,8 @@
 
 // todo:
-// change percentages to set heights and witdths
-// fix portrait sizing
 // replace java calc with mini golf app on resume
+// popup animation
+// popup X icon
 
 document.addEventListener("click", closeProjects)
 window.onload = function () {
@@ -32,14 +32,60 @@ function openProject(element) {
 }
 
 function closeProjects(element) {
-    console.log(element.target.classList)
     if (element.target.classList.contains("project-popup-bg")) {
         let elements = document.querySelectorAll(".project-popup-bg");
         for (var i = 0; i < elements.length; i++) {
             elements[i].style.display = "none"
         }
     }
+}
 
+function closeProjectsX() {
+    let elements = document.querySelectorAll(".project-popup-bg");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = "none"
+    }
+}
 
+function projOneNextImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-1-image").src;
+        if (currImgURL.includes("img-1")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-2.png";
+            document.getElementById("proj-1-tip").innerHTML = "Worker Results Table"
+            document.getElementById("proj-1-left").classList.add("active");
+        }
+        else if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-3.png";
+            document.getElementById("proj-1-tip").innerHTML = "Tip History"
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-4.png";
+            document.getElementById("proj-1-tip").innerHTML = "Cash Reports Total"
+            document.getElementById("proj-1-right").classList.remove("active");
+        }
+    }
+}
+
+function projOnePrevImage(element) {
+    if (element.classList.contains("active")) {
+
+        let currImgURL = document.getElementById("proj-1-image").src;
+        if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-1.png";
+            document.getElementById("proj-1-tip").innerHTML = "Input Worker Information"
+            document.getElementById("proj-1-left").classList.remove("active");
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-2.png";
+            document.getElementById("proj-1-tip").innerHTML = "Worker Results Table"
+        }
+        else if (currImgURL.includes("img-4")) {
+            document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-3.png";
+            document.getElementById("proj-1-tip").innerHTML = "Tip History"
+            document.getElementById("proj-1-right").classList.add("active");
+
+        }
+    }
 }
 
