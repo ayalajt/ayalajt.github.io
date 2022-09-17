@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 1265px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
     justify-content: center;
     align-items: center;
@@ -174,7 +174,7 @@ body {
 
 .projects-container {
     width: 1200px;
-    height: 900px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,18 +284,14 @@ body {
 }
 
 .project-popup.p4 {
-    max-height: 705px;
-}
-
-.project-popup.p5 {
-    max-height: 595px;
+    max-height: 600px;
 }
 
 .project-popup.p6 {
     max-height: 690px;
 }
 
-.project-popup.p7 {
+.project-popup.p5 {
     max-height: 705px;
 }
 
@@ -314,19 +310,21 @@ body {
 .popup-image-container {
     display: flex;
     min-width: 500px;
-    min-height: 300px;
+    min-height: 281px;
     max-width: 500px;
-    max-height: 300px;
+    max-height: 281px;
     border: 2px solid black;
 }
 
 .popup-image-container img {
     width: 100%;
     height: auto;
+    image-rendering: crisp-edges;
 }
+
 .arrow-container {
     display: flex;
-    height: 304px;
+    height: 285px;
     width: 60px;
     align-items: center;
     justify-content: center;
@@ -382,6 +380,11 @@ body {
     margin-bottom: 10px;
 }
 
+.project-popup.p4 .github-link,
+.project-popup.p5 .github-link {
+    position: absolute;
+    bottom: 10px;
+}
 .icons-container {
     display: flex;
     width: 200px;
@@ -457,8 +460,8 @@ a {
     height: 20px;
     font-size: 14px;
     color: gray;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 10px;
 
 }
 
@@ -472,4 +475,12 @@ a {
 
 .close-icon:hover {
     cursor: pointer;
+}
+
+
+.multiple-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
 }

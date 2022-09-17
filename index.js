@@ -2,7 +2,11 @@
 // todo:
 // replace java calc with mini golf app on resume
 // popup animation
-// popup X icon
+// min width body fix
+// on closing popup reset to img-1
+// global consts for proj-x-images
+
+
 
 document.addEventListener("click", closeProjects)
 window.onload = function () {
@@ -69,7 +73,6 @@ function projOneNextImage(element) {
 
 function projOnePrevImage(element) {
     if (element.classList.contains("active")) {
-
         let currImgURL = document.getElementById("proj-1-image").src;
         if (currImgURL.includes("img-2")) {
             document.getElementById("proj-1-image").src = "./images/proj-1-tipcalc/img-1.png";
@@ -89,3 +92,36 @@ function projOnePrevImage(element) {
     }
 }
 
+
+function projTwoNextImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-2-image").src;
+        if (currImgURL.includes("img-1")) {
+            document.getElementById("proj-2-image").src = "./images/proj-2-ramaction/img-2.png";
+            document.getElementById("proj-2-tip").innerHTML = "Flowchart creation & results"
+            document.getElementById("proj-2-left").classList.add("active");
+        }
+        else if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-2-image").src = "./images/proj-2-ramaction/img-3.png";
+            document.getElementById("proj-2-tip").innerHTML = "Guide"
+            document.getElementById("proj-2-right").classList.remove("active");
+        }
+    }
+}
+
+function projTwoPrevImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-2-image").src;
+        if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-2-image").src = "./images/proj-2-ramaction/img-1.png";
+            document.getElementById("proj-2-tip").innerHTML = "Homepage"
+            document.getElementById("proj-2-left").classList.remove("active");
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-2-image").src = "./images/proj-2-ramaction/img-2.png";
+            document.getElementById("proj-2-tip").innerHTML = "Flowchart creation & results"
+            document.getElementById("proj-2-right").classList.add("active");
+
+        }
+    }
+}

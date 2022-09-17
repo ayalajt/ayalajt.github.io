@@ -142,10 +142,10 @@
                 </div>
             </div>
             <div class="project" id="proj-5">
-                <h2>C Text Parser</h2>
+                <h2>Word Sense Disambiguation</h2>
                 <div class="img-container">
                     <div class="img-box">
-                        <img src="./images/proj-5-cparser/thumbnail.png">
+                        <img src="./images/proj-7-wsd/thumbnail.png">
                     </div>
                 </div>
             </div>
@@ -157,15 +157,6 @@
                     </div>
                 </div>
             </div>
-            <div class="project" id="proj-7">
-                <h2>Word Sense Disambiguation</h2>
-                <div class="img-container">
-                    <div class="img-box">
-                        <img src="./images/proj-7-wsd/thumbnail.png">
-                    </div>
-                </div>
-            </div>
-
         </div>
     </a>
     <div class="project-popup-bg" id="proj-1-info">
@@ -180,11 +171,13 @@
                     <img class="current-image" id="proj-1-image" src="./images/proj-1-tipcalc/img-1.png">
                 </div>
                 <div class="arrow-container">
-                    <img id="proj-1-right" class="active" src="./images/icons/right-arrow.svg" onclick="projOneNextImage(this)">
+                    <img id="proj-1-right" class="active" src="./images/icons/right-arrow.svg"
+                        onclick="projOneNextImage(this)">
                 </div>
-
             </div>
-            <div class="image-tip" id="proj-1-tip"><p>Input Worker Information</p></div>
+            <div class="image-tip" id="proj-1-tip">
+                <p>Input Worker Information</p>
+            </div>
             <div class="project-text">
                 <p>Individually developed a website used by a local restaurant to calculate the tip payout
                     for each worker per day.
@@ -210,9 +203,22 @@
     </div>
     <div class="project-popup-bg" id="proj-2-info">
         <div class="project-popup p2">
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
             <h1>RAMAction</h1>
-            <div class="popup-image-container">
-
+            <div class="image-arrow-container">
+                <div class="arrow-container">
+                    <img id="proj-2-left" src="./images/icons/left-arrow.svg" onclick="projTwoPrevImage(this)">
+                </div>
+                <div class="popup-image-container">
+                    <img class="current-image" id="proj-2-image" src="./images/proj-2-ramaction/img-1.png">
+                </div>
+                <div class="arrow-container">
+                    <img id="proj-2-right" class="active" src="./images/icons/right-arrow.svg"
+                        onclick="projTwoNextImage(this)">
+                </div>
+            </div>
+            <div class="image-tip" id="proj-2-tip">
+                <p>Homepage</p>
             </div>
             <div class="project-text">
                 <p>Created an application with 3 other developers that allows users to visualize basic programming
@@ -236,7 +242,8 @@
                 <p>Developed with ReactJS, NodeJS, HTML, and CSS. Group worked together via agile software process.
                 </p>
             </div>
-            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
+            <a href="https://www.people.vcu.edu/~ccbudwell/App/RAMAction/" target="_blank"
+                class="github-link">Website</a>
         </div>
     </div>
     <div class="project-popup-bg" id="proj-3-info">
@@ -264,10 +271,8 @@
     </div>
     <div class="project-popup-bg" id="proj-4-info">
         <div class="project-popup p4">
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
             <h1>Sales Summary Excel Extractor</h1>
-            <div class="popup-image-container">
-
-            </div>
             <div class="project-text">
                 <p>Individually created a Python application for a client that owns a restaurant in order to speed
                     up monthly sales reports,
@@ -291,19 +296,25 @@
 
     <div class="project-popup-bg" id="proj-5-info">
         <div class="project-popup p5">
-            <h1>C Text Parser</h1>
-            <div class="popup-image-container">
-            </div>
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
+            <h1>Word Sense Disambiguation</h1>
             <div class="project-text">
-                <p>Developed a C program in VIM that tokenizes and parses through a text file to check if it is a
-                    syntactically valid C program</p>
+                <p>Developed a program that is a Decision List classifier for disambiguating the word "line" given a
+                    training and testing file
+                </p>
                 <p>Features:</p>
                 <ul>
-                    <li>Parses through a C file to verify if the format is valid</li>
-                    <li>Checks valid grammar pattern, and can print the number of lexemes as well as the
-                        lexemes themselves</li>
+                    <li>Accepts a training and a testing file that each have different instances of the word "line"
+                    </li>
+                    <li>Parses through the training file to gather information for each instance of the word "line",
+                        creating
+                        features to increase the accuracy of detecting what form of the word "line" is in
+                    </li>
+                    <li>Uses the information gathered from the training file on the testing file</li>
+                    <li>Compares the testing file results with a key, and outputs the results in a matrix with an
+                        overall accuracy score</li>
                 </ul>
-                <p>Developed in C with VIM</p>
+                <p>Developed in Python</p>
             </div>
             <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
@@ -333,34 +344,6 @@
             <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
         </div>
 
-    </div>
-
-    <div class="project-popup-bg" id="proj-7-info">
-        <div class="project-popup p7">
-            <h1>Word Sense Disambiguation</h1>
-            <div class="popup-image-container">
-
-            </div>
-            <div class="project-text">
-                <p>Developed a program that is a Decision List classifier for disambiguating the word "line" given a
-                    training and testing file
-                </p>
-                <p>Features:</p>
-                <ul>
-                    <li>Accepts a training and a testing file that each have different instances of the word "line"
-                    </li>
-                    <li>Parses through the training file to gather information for each instance of the word "line",
-                        creating
-                        features to increase the accuracy of detecting what form of the word "line" is in
-                    </li>
-                    <li>Uses the information gathered from the training file on the testing file</li>
-                    <li>Compares the testing file results with a key, and outputs the results in a matrix with an
-                        overall accuracy score</li>
-                </ul>
-                <p>Developed in Python</p>
-            </div>
-            <a href="https://github.com/ayalajt/tipTool" target="_blank" class="github-link">Github</a>
-        </div>
     </div>
     <div class="contact-container">
         <div class="icons-container">
