@@ -145,7 +145,7 @@
                 <h2>Word Sense Disambiguation</h2>
                 <div class="img-container">
                     <div class="img-box">
-                        <img src="./images/proj-7-wsd/thumbnail.png">
+                        <img src="./images/proj-5-wsd/thumbnail.png">
                     </div>
                 </div>
             </div>
@@ -248,9 +248,22 @@
     </div>
     <div class="project-popup-bg" id="proj-3-info">
         <div class="project-popup p3">
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
             <h1>My Mini Swing</h1>
-            <div class="popup-image-container">
-
+            <div class="image-arrow-container">
+                <div class="arrow-container">
+                    <img id="proj-3-left" src="./images/icons/left-arrow.svg" onclick="projTwoPrevImage(this)">
+                </div>
+                <div class="popup-image-container mobile">
+                    <img class="current-image" id="proj-3-image" src="./images/proj-3-minigolf/img-1.png">
+                </div>
+                <div class="arrow-container">
+                    <img id="proj-3-right" class="active" src="./images/icons/right-arrow.svg"
+                        onclick="projTwoNextImage(this)">
+                </div>
+            </div>
+            <div class="image-tip" id="proj-3-tip">
+                <p>Homepage</p>
             </div>
             <div class="project-text">
                 <p>Developed an Android application that keeps track of each player's strokes per hole in a game
@@ -322,8 +335,22 @@
 
     <div class="project-popup-bg" id="proj-6-info">
         <div class="project-popup p6">
+            <img class="close-icon" src="./images/icons/xmark.svg" onclick="closeProjectsX()">
             <h1>Linear Algebra Calculator</h1>
-            <div class="popup-image-container">
+            <div class="image-arrow-container">
+                <div class="arrow-container">
+                    <img id="proj-6-left" src="./images/icons/left-arrow.svg" onclick="projTwoPrevImage(this)">
+                </div>
+                <div class="popup-image-container mobile">
+                    <img class="current-image" id="proj-6-image" src="./images/proj-3-minigolf/img-1.png">
+                </div>
+                <div class="arrow-container">
+                    <img id="proj-6-right" class="active" src="./images/icons/right-arrow.svg"
+                        onclick="projTwoNextImage(this)">
+                </div>
+            </div>
+            <div class="image-tip" id="proj-3-tip">
+                <p>Homepage</p>
             </div>
             <div class="project-text">
                 <p>Created a calculator for Android that can be used for common Linear Algebra operations.</p>
