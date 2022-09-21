@@ -16,7 +16,7 @@ window.onload = function () {
 function loadProjects() {
     let projectNum = 1;
     let projectName = "proj-";
-    const totalProjects = 7;
+    const totalProjects = 6;
 
     for (var i = 0; i < totalProjects; i++) {
         let currProject = projectName + projectNum
@@ -122,6 +122,89 @@ function projTwoPrevImage(element) {
             document.getElementById("proj-2-tip").innerHTML = "Flowchart creation & results"
             document.getElementById("proj-2-right").classList.add("active");
 
+        }
+    }
+}
+
+
+function projThreeNextImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-3-image").src;
+        if (currImgURL.includes("img-1")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-2.png";
+            document.getElementById("proj-3-tip").innerHTML = "Game Creation Screen"
+            document.getElementById("proj-3-left").classList.add("active");
+        }
+        else if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-3.png";
+            document.getElementById("proj-3-tip").innerHTML = "Current Game Input Screen"
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-4.png";
+            document.getElementById("proj-3-tip").innerHTML = "Winner Screen"
+            document.getElementById("proj-3-right").classList.remove("active");
+        }
+    }
+}
+
+
+function projThreePrevImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-3-image").src;
+        if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-1.png";
+            document.getElementById("proj-3-tip").innerHTML = "Home Screen"
+            document.getElementById("proj-3-left").classList.remove("active");
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-2.png";
+            document.getElementById("proj-3-tip").innerHTML = "Game Creation Screen"
+        }
+        else if (currImgURL.includes("img-4")) {
+            document.getElementById("proj-3-image").src = "./images/proj-3-minigolf/img-3.png";
+            document.getElementById("proj-3-tip").innerHTML = "Current Game Input Screen"
+            document.getElementById("proj-3-right").classList.add("active");
+        }
+    }
+}
+
+
+function projSixNextImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-6-image").src;
+        if (currImgURL.includes("img-1")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-2.png";
+            document.getElementById("proj-6-tip").innerHTML = "Matrix Calculator"
+            document.getElementById("proj-6-left").classList.add("active");
+        }
+        else if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-3.png";
+            document.getElementById("proj-6-tip").innerHTML = "Permutation/Combination Calculator"
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-4.png";
+            document.getElementById("proj-6-tip").innerHTML = "Truth Table Calculator"
+            document.getElementById("proj-6-right").classList.remove("active");
+        }
+    }
+}
+
+function projSixPrevImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-6-image").src;
+        if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-1.png";
+            document.getElementById("proj-6-tip").innerHTML = "Matrix Calculator"
+            document.getElementById("proj-6-left").classList.remove("active");
+        }
+        else if (currImgURL.includes("img-3")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-2.png";
+            document.getElementById("proj-6-tip").innerHTML = "Permutation/Combination Calculator"
+        }
+        else if (currImgURL.includes("img-4")) {
+            document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-3.png";
+            document.getElementById("proj-6-tip").innerHTML = "Truth Table Calculator"
+            document.getElementById("proj-6-right").classList.add("active");
         }
     }
 }
