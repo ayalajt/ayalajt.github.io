@@ -5,6 +5,7 @@
 // min width body fix
 // on closing popup reset to img-1
 // global consts for proj-x-images
+// lower res portrait
 
 
 
