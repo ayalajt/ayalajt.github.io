@@ -1,12 +1,12 @@
 
 // todo:
-// replace java calc with mini golf app on resume
 // popup animation
 // min width body fix
 // on closing popup reset to img-1
-// global consts for proj-x-images
-// lower res portrait
-
+// minimalist styling
+// mobile design
+// load website gracefully
+// favicon
 
 
 document.addEventListener("click", closeProjects)
