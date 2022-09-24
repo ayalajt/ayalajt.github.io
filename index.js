@@ -5,7 +5,7 @@
 // on closing popup reset to img-1
 // minimalist styling
 // mobile design
-// load website gracefully
+// load website gracefully (fade in)
 // favicon
 
 
