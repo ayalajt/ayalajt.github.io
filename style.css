@@ -516,7 +516,8 @@ body {
 }
 
 
-@media (max-width: 500px) { 
+/*
+@media only screen and (max-width: 500px) { 
     body {
         min-width: none;
         width: 100%;
@@ -572,4 +573,9 @@ body {
     .projects-container {
         width: 100%;
     }
+    .project-popup {
+        width: 100%;
+    }
+
 }
+*/
