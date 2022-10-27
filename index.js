@@ -1,6 +1,6 @@
 
 // todo:
-// popup animation
+// popup animation, start at clicked proj and make big
 // min width body fix
 // on closing popup reset to img-1
 // minimalist styling
@@ -17,7 +17,7 @@ window.onload = function () {
 function loadProjects() {
     let projectNum = 1;
     let projectName = "proj-";
-    const totalProjects = 6;
+    const totalProjects = 8;
 
     for (var i = 0; i < totalProjects; i++) {
         let currProject = projectName + projectNum
@@ -206,6 +206,30 @@ function projSixPrevImage(element) {
             document.getElementById("proj-6-image").src = "./images/proj-6-linearcalc/img-3.png";
             document.getElementById("proj-6-tip").innerHTML = "Truth Table Calculator"
             document.getElementById("proj-6-right").classList.add("active");
+        }
+    }
+}
+
+function projSevenNextImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-7-image").src;
+        if (currImgURL.includes("img-1")) {
+            document.getElementById("proj-7-image").src = "./images/proj-7-invoice/img-2.png";
+            document.getElementById("proj-7-tip").innerHTML = "Invoice Total for the previous week"
+            document.getElementById("proj-7-left").classList.add("active");
+            document.getElementById("proj-7-right").classList.remove("active");
+        }
+    }
+}
+
+function projSevenPrevImage(element) {
+    if (element.classList.contains("active")) {
+        let currImgURL = document.getElementById("proj-7-image").src;
+        if (currImgURL.includes("img-2")) {
+            document.getElementById("proj-7-image").src = "./images/proj-7-invoice/img-1.png";
+            document.getElementById("proj-7-tip").innerHTML = "Invoice Home"
+            document.getElementById("proj-7-left").classList.remove("active");
+            document.getElementById("proj-7-right").classList.add("active");
         }
     }
 }
