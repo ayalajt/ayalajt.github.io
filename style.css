@@ -548,4 +548,7 @@ body {
     margin-right: 8px;
 }
 
+.skills-container, .projects-container {
+    scroll-margin-top: 30px;
+}
 
